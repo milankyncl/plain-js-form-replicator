@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form replicator example</title>
+    <style type="text/css">
+
+        .items {
+
+            background-color: #eee;
+            border: 1px solid #ddd;
+
+            max-width: 600px;
+            width: 100%;
+
+            display: block;
+
+            margin: 30px;
+
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="items" id="demo">
+
+        <div data-group-inner>
+
+            <div data-group-item>
+
+                <table border="0" width="100%">
+                    <tr>
+                        <td>
+                            <label for="name">Zadejte Vaše jméno</label>
+
+                            <br>
+
+                            <input type="text" name="name" id="name">
+                        </td>
+                        <td>
+                            <label for="surename">Zadejte Vaše Příjmení</label>
+
+                            <br>
+
+                            <input type="text" name="surename" id="surename">
+                        </td>
+                        <td>
+
+                            <a href="#" data-group-remove-item>Odstranit</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <a href="#" data-group-add-item>Přidat řádek</a>
+
+    </div>
+
+    <script type="text/javascript" src="src/form-replicator.js"></script>
+    <script>
+        FormReplicator.init(document.getElementById('demo'), 'items');
+    </script>
+</body>
+</html>
